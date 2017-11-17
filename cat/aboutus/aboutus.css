@@ -1,0 +1,13 @@
+body {
+	width: 600px;
+	text-align: justify;
+}
+
+h1 {
+	text-align: center;
+	padding: 10px;
+}
+
+#header {
+	height: 50px;
+}

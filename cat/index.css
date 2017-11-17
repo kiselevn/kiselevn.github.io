@@ -1,0 +1,117 @@
+body {
+	font-size: 14px;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	line-height: 1.6em;
+	background-color: #f9f9f9;
+	width: 960px;
+	margin: 0px auto;
+}
+
+#header {
+	background-color: #ccffcc;
+	height: 108px;
+}
+
+#sidebar {
+	background-color: #e1ffdd;
+	float: right;
+	width: 250px;
+	padding: 5px;
+	margin: 10px 0px auto 10px;
+}
+
+#nav, #content, #footer {
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
+}
+
+#footer {
+	background-color: #7fdb8b;
+	height: 150px;
+	line-height: 0.8em;
+}
+
+#copy {
+	position: relative;
+	top: 10px;
+	left: 400px;
+}
+
+#content {
+	background-color: #eaeaea;
+	overflow: auto;
+	height: 100%;
+	text-align: justify;
+}
+
+#logo {
+	width: 100px;
+	float: left;
+	position: relative;
+	top: 2px;
+	left: 8px;
+}
+
+#nav {
+	float: left;
+	position: relative;
+	top: 4px;
+	left: 10px;
+}
+
+#cat_builder {
+	width: 250px;
+}
+a:link {
+	color: #021400;
+}
+
+a:visited {
+	color: #074c00;
+}
+/*Стили верхнего меню*/
+li.items {
+	list-style-type: none;
+	text-align: center;
+	display: inline;
+	padding: 10px;
+	margin: 5px;
+	background-color: #63d863;
+	border-radius: 10px;
+}
+
+li.items:hover {
+	background-color: #ce7d7d;
+}
+
+/*Стили ссылок верхнего меню*/
+a.aitems:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a.aitems:visited {
+	color: #000000;
+}
+
+address {
+	text-align: center;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 170%;
+	margin: 0px;
+}
+
+h2 {
+	font-size: 150%;
+}
+
+h3 {
+	font-size: 120%;
+}
+
+h4 {
+	font-size: 110%;
+}

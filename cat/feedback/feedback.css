@@ -1,0 +1,18 @@
+body {
+	width: 600px;
+	background-image: url(../images/allcats.jpg);
+}
+
+#header {
+	height: 50px;
+	border-radius: 0px 0px 15px 15px;
+}
+
+h1 {
+	text-align: center;
+	padding: 10px;
+}
+
+#content {
+	border-radius: 15px;
+}

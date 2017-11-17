@@ -1,0 +1,32 @@
+body {
+	width: 600px;
+}
+
+#header {
+	height: 50px;
+}
+
+h1 {
+	padding: 10px;
+	text-align: center;
+}
+
+address {
+	font-weight: normal;
+}
+
+img#boss {
+	width: 500px;
+}
+
+img#test {
+	width: 460px;
+}
+
+a {
+	float: left;
+}
+
+#content {
+	text-align: center;
+}
