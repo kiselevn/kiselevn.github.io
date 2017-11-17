@@ -20,28 +20,28 @@ body {
 	margin: 10px 0px auto 10px;
 }
 
-#nav, #content, #footer {
-	margin: 10px 0px 10px 0px;
-	padding: 10px;
+#content {
+	background-color: #eaeaea;
+	overflow: auto;
+	text-align: justify;
 }
 
 #footer {
 	background-color: #7fdb8b;
 	height: 150px;
 	line-height: 0.8em;
+	clear: right;
+}
+
+#nav, #content, #footer {
+	margin: 10px 0px 10px 0px;
+	padding: 10px;
 }
 
 #copy {
 	position: relative;
 	top: 10px;
 	left: 400px;
-}
-
-#content {
-	background-color: #eaeaea;
-	overflow: auto;
-	height: 100%;
-	text-align: justify;
 }
 
 #logo {
@@ -69,6 +69,7 @@ a:link {
 a:visited {
 	color: #074c00;
 }
+
 /*Стили верхнего меню*/
 li.items {
 	list-style-type: none;
