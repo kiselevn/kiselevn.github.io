@@ -1,7 +1,13 @@
 body {
-  width: 1024px;
-  margin: 0 auto;
   background-color: #fff;
+}
+.container {
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  } 
 }
 .header {
   position: fixed;
@@ -15,7 +21,14 @@ body {
 .logo {
   float: left;
 }
+.logo #logo {
+  height: 36px;
+  width: 36px;
+  vertical-align: -10px;
+  margin-left: 10px;
+}
 .logo span {
+  margin-left: 5px;
   color: #000;
   font-family: 'Righteous', sans-serif;
   font-size: 24px;
@@ -33,15 +46,17 @@ body {
   position: relative;
   top: -5px;
   height: 2px;
-  width: 26px;
+  width: 46px;
+  margin-left: 16px;
+  margin-right: 16px;
   background: rgba(0,0,0,0.3);
 }
 .switches input {
   position: absolute;
-  top: -10px;
-  left: -60px;
-  height: 21px;
-  width: 118px;
+  top: -11px;
+  left: -76px;
+  height: 26px;
+  width: 169px;
   margin: 0;
   padding: 0;
   opacity: 0;
@@ -52,14 +67,31 @@ body {
   display: block;
   float: left;
   position: relative;
-  top: -10px;
-  left: -24px;
-  height: 25px;
-  width: 25px;
-  background: #ccc;
+  top: -11px;
+  left: -7px;
+  height: 21px;
+  width: 21px;
+  background-color: #fff;
+  border: 2px solid #807e7f;
   border-radius: 50%;
   z-index: 1;
+  transition: left .2s ease;
 }
-.switches input:checked~.switch{ left: -24px; }
-.switches input~:checked~.switch{ left: 25px; }
-.switches input:checked{ z-index: 0; }
+.switches input:checked~.switch {
+  top: -11px; 
+  left: -7px;
+  height: 21px;
+  width: 21px;
+  background-color: #fff;
+  border: 2px solid #807e7f;
+}
+.switches input~:checked~.switch { 
+  left: 30px;
+  background: #38b5c7;
+  border: none;
+  height: 25px;
+  width: 25px;
+}
+.switches input:checked { 
+  z-index: 0;
+}
