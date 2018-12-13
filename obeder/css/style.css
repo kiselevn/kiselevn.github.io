@@ -3,20 +3,17 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #000;
+  margin: 0 auto;
 }
 h2 {
   font-size: 36px;
   font-weight: 400;
-}
-.container {
-  margin: 0 auto;
 }
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  /* width: 1024px; */
   height: 56px;
   text-align: center;
   line-height: 54px;
@@ -103,7 +100,18 @@ h2 {
 
 /* content */
 .content {
+  margin: 0 auto;
   margin-top: 56px;
+  width: 800px;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 386px));
+  grid-gap: 10px;
+}
+section h2 {
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 section:first-child {
   margin-top: 93px;
@@ -113,11 +121,4 @@ article {
   background: #fafafa;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.24);
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12);
-}
-
-
-@media (min-width: 800px) {
-  .container {
-    width: 800px;
-  } 
 }
