@@ -17,10 +17,15 @@ h2 {
   height: 56px;
   text-align: center;
   line-height: 54px;
+  background: #fff;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.26);
 }
 .logo {
   float: left;
+}
+.logo a {
+  text-decoration: none;
+  color: inherit;
 }
 .logo #logo {
   height: 36px;
@@ -104,14 +109,10 @@ h2 {
   margin-top: 56px;
   width: 800px;
 }
-section {
+form {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 386px));
   grid-gap: 10px;
-}
-section h2 {
-  grid-column-start: 1;
-  grid-column-end: -1;
 }
 section:first-child {
   margin-top: 93px;

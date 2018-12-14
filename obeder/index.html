@@ -10,8 +10,10 @@
 <body>
   <div class="header">
     <div class="logo">
+      <a href="index.html">
       <img id="logo" src="image/logo.png" alt="logo">
       <h1>obeder</h1>
+      </a>
     </div>
     <div class="toggle-group">
       <p>Не ем</p>
@@ -26,16 +28,72 @@
   <div class="content">
     <section>
       <h2>Понедельник, сегодня, 6 февраля</h2>
-      <article>
-        <h3>Салаты</h3>
-        
-      </article>
-      <article>
-        <h3>Мясо</h3>
-          
-      </article>
+      <form>
+        <article>
+          <h3>Салаты</h3>
+          <input type="checkbox" name="salad" value="delicate" class="delicate">Нежный<br>
+          <input type="checkbox" name="salad" value="salad_of_beetroot" class="salad_of_beetroot">Винегрет овощной со свежим горошком<br>
+        </article>
+        <article>
+          <h3>Мясо</h3>
+          <input type="checkbox" name="meat" value="kupaty">Купаты купательные<br>
+          <input type="checkbox" name="meat" value="german_sausages">Сосиски немецкие с сыром, приправами, чесноком и базиликом<br>
+        </article>
+        <article>
+          <h3>Супы</h3>
+          <input type="checkbox" name="soup" value="borsch">Борщ с галушками по-украински<br>
+          <input type="checkbox" name="soup" value="shchi">Щи щецкие по щщам дающие на серьёзных щщах<br>
+        </article>
+        <article>
+          <h3>Гарниры</h3>
+          <input type="checkbox" name="side_dish" value="rice">Рис-хуис<br>
+          <input type="checkbox" name="side_dish" value="pasta">Макарохи<br>
+        </article>
+        <article>
+          <h3>Вторые блюда</h3>
+          <input type="checkbox" name="main_dishes" value="Ubercarbonara">Уберкарбонара с соусом из усов шанхайского барса<br>
+          <input type="checkbox" name="main_dishes" value="pelmeni">Пельмехи зачотные<br>
+        </article>
+        <div>
+          <input type="text" name="comment" id="">
+          <button type="reset">Сбросить в дефолт</button>
+        </div>
+      </form>
     </section>
-    <section></section>
+    <section>
+      <h2>Вторник, завтра, 7 февраля</h2>
+      <form>
+        <article>
+          <h3>Салаты</h3>
+          <input type="checkbox" name="salad" value="delicate" class="delicate">Нежный<br>
+          <input type="checkbox" name="salad" value="salad_of_beetroot" class="salad_of_beetroot">Винегрет овощной со свежим горошком<br>
+        </article>
+        <article>
+          <h3>Мясо</h3>
+          <input type="checkbox" name="meat" value="kupaty">Купаты купательные<br>
+          <input type="checkbox" name="meat" value="german_sausages">Сосиски немецкие с сыром, приправами, чесноком и базиликом<br>
+        </article>
+        <article>
+          <h3>Супы</h3>
+          <input type="checkbox" name="soup" value="borsch">Борщ с галушками по-украински<br>
+          <input type="checkbox" name="soup" value="shchi">Щи щецкие по щщам дающие на серьёзных щщах<br>
+        </article>
+        <article>
+          <h3>Гарниры</h3>
+          <input type="checkbox" name="side_dish" value="rice">Рис-хуис<br>
+          <input type="checkbox" name="side_dish" value="pasta">Макарохи<br>
+        </article>
+        <article>
+          <h3>Вторые блюда</h3>
+          <input type="checkbox" name="main_dishes" value="Ubercarbonara">Уберкарбонара с соусом из усов шанхайского барса<br>
+          <input type="checkbox" name="main_dishes" value="pelmeni">Пельмехи зачотные<br>
+        </article>
+        <div>
+          <input type="text" name="comment" id="">
+          <button type="reset">Сбросить в дефолт</button>
+        </div>
+      </form>
+    </section>
   </div>
 </body>
 </html>
