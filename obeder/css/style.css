@@ -3,7 +3,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #000;
-  margin: 0 auto;
 }
 h2 {
   font-size: 36px;
@@ -106,19 +105,18 @@ h2 {
 
 /* content */
 .content {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 800px));
+  justify-content: center;
+  padding: 0 15px;
   margin-top: 56px;
   margin-bottom: 10px;
-  max-width: 800px;
 }
 form {
   display: grid;
-  grid-template-columns: repeat(2, minmax(288px, 386px));
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
   grid-gap: 28px;
   grid-auto-rows: minmax(100px, auto);
-}
-section:first-child {
-  margin-top: 93px;
 }
 article {
   padding: 15px 22px 10px 25px;
@@ -221,3 +219,12 @@ article .checkbox {
   transform: rotate(45deg);
 }
 /* end */
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .btn-reset {
+    width: 260px;
+  }
+}
