@@ -8,7 +8,7 @@ h2 {
   font-size: 36px;
   font-weight: 400;
 }
-.header {
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,8 +40,16 @@ h2 {
   font-size: 24px;
   font-weight: 400;
 }
+.logo a:hover  {
+  opacity: 0.7;
+}
 
 /* toggle header */
+.toggle-group {
+  display: inline-block;
+  position: relative;
+  left: -42px;
+}
 .toggle-group p {
   display: inline;
   color: #4d4d4d;
@@ -106,17 +114,19 @@ h2 {
 /* content */
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 800px));
+  grid-template-columns: repeat(1, minmax(260px, 800px));
   justify-content: center;
-  padding: 0 15px;
+  padding: 0 15px 0 17px;
   margin-top: 56px;
-  margin-bottom: 10px;
 }
-form {
+section {
+  margin-bottom: 45px;
+}
+form.menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, auto));
   grid-gap: 28px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(75px, auto);
 }
 article {
   padding: 15px 22px 10px 25px;
@@ -127,7 +137,7 @@ article {
 }
 article h3 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: 12px;
 }
@@ -220,11 +230,70 @@ article .checkbox {
 }
 /* end */
 
+/* starting page*/
+.content-starting {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(160px, 360px));
+  justify-content: center;
+  text-align: center;
+  padding: 0 30px 0 25px;
+}
+.content-starting .header a {
+  color: #000;
+}
+.content-starting .header a:visited {
+  text-decoration: none;
+}
+.content-starting .header #logo {
+  width: 260px;
+  height: 260px;
+}
+.content-starting .header h1 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 50px;
+  margin: 10px 0 0;
+}
+
+/* end */
+
 @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  form.menu {
+    grid-gap: 15px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  article h3 {
+    font-size: 18px;
+  }
   .logo {
     display: none;
   }
+  .toggle-group {
+    position: static;
+  }
+}
+@media (max-width: 320px) {
+  h2 {
+    margin-top: 17px;
+  }
+  h2 span {
+    display: none;
+  }
+  section {
+    margin-bottom: 0;
+  }
+  article {
+    padding: 17px 22px 10px 13px;
+  }
+  .comment {
+    display: none;
+  }
   .btn-reset {
-    width: 260px;
+    width: 100%;
+    margin-top: 0;
   }
 }
