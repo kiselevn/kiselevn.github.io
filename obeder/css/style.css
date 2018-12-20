@@ -199,9 +199,6 @@ article .checkbox {
   border-radius: 2px;
   opacity: 0.54;
 }
-.checkbox:hover input ~ .checkmark {
-  background-color: #009688;
-}
 .checkbox input:checked ~ .checkmark {
   background-color: #009688;
   opacity: 1;
@@ -274,11 +271,6 @@ article .checkbox {
   }
   .toggle-group {
     position: static;
-  }
-}
-@media screen and (max-width: 768px) {
-  .checkbox:hover input ~ .checkmark {
-    background-color: transparent;
   }
 }
 @media (max-width: 320px) {
