@@ -14,17 +14,17 @@
   <div class="content-starting">
     <div class="header">
       <div class="logotype">
-        <a href="#">
-          <img id="logo" src="image/logo.png" alt="logo">
-          <h1>obeder</h1>
-        </a>
+        <img id="logo" src="image/logo.png" alt="logo">
+        <h1>obeder</h1>
       </div>
     </div>
     <div class="log-in">
       <form action="menu.html">
-        <input type="email" name="email" id="email" placeholder="Электропочта">
-        <input type="password" name="password" id="password" placeholder="Кодовое слово">
-        <button type="submit">Обедать!</button>
+        <input type="email" name="email" id="email" placeholder="Электропочта" autocorrect="off" autocapitalize="off" autocomplete="email" required>
+        <input type="password" name="password" id="password" placeholder="Кодовое слово" autocorrect="off" required>
+        <div>
+          <button type="submit" class="btn btn-dinner">Обедать!</button>
+        </div>
       </form>
       <p class="small-text">Крайне мелкий текст поясняющий магические особенности входа или регистрации</p>
     </div>
