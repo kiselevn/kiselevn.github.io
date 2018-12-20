@@ -276,6 +276,11 @@ article .checkbox {
     position: static;
   }
 }
+@media screen and (max-width: 768px) {
+  .checkbox:hover input ~ .checkmark {
+    background-color: transparent;
+  }
+}
 @media (max-width: 320px) {
   h2 {
     margin-top: 17px;
