@@ -144,22 +144,29 @@ form.menu {
   grid-gap: 28px;
   grid-auto-rows: minmax(75px, auto);
 }
-article {
+fieldset {
   padding: 15px 22px 10px 25px;
   border: 0.5px solid rgba(0,0,0,0.24);
   border-radius: 3px;
   background: #fafafa;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
-article h3 {
+fieldset h3 {
   font-size: 20px;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 12px;
 }
-article .checkbox {
+fieldset .checkbox {
   display: block;
   margin-bottom: 12px;
+}
+fieldset:disabled {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  mix-blend-mode: normal;
+  opacity: 0.2;
 }
 .comment {
   width: 100%;
@@ -328,7 +335,7 @@ article .checkbox {
   h2 {
     font-size: 24px;
   }
-  article h3 {
+  fieldset h3 {
     font-size: 18px;
   }
   .logo {
@@ -348,7 +355,7 @@ article .checkbox {
   section {
     margin-bottom: 34px;
   }
-  article {
+  fieldset {
     padding: 17px 22px 10px 13px;
   }
   .btn-reset {
