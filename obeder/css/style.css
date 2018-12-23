@@ -99,11 +99,11 @@ header {
   float: left;
   position: relative;
   top: -11px;
-  left: -7px;
-  height: 21px;
-  width: 21px;
-  background-color: #fff;
-  border: 2px solid #807e7f;
+  left: 30px;
+  background: #38b5c7;
+  border: none;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   z-index: 1;
   transition: left .2s ease;

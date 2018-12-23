@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width" />
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="js/common.js" defer></script>
   <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -20,11 +21,11 @@
     </div>
     <div class="toggle-group">
       <p>Не ем</p>
-      <span class="switches">
+      <form class="switches" name="swithesForm">
         <input type="radio" name="switch" value="off">
-        <input type="radio" name="switch" value="on">
+        <input type="radio" name="switch" value="on" checked>
         <span class="switch"></span>
-      </span>
+      </form>
       <p>Ем</p>
     </div>
   </header>
