@@ -345,7 +345,7 @@ fieldset:disabled label {
   grid-template-columns: repeat(1, minmax(160px, 266px));
   justify-content: center;
   text-align: center;
-  padding: 30px 30px 0 24px;
+  padding: 55px 30px 0 24px;
 }
 .content-starting .header {
   margin-bottom: 55px;
