@@ -3,6 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #000;
+  overflow-y: scroll;
 }
 h2 {
   font-size: 36px;
@@ -134,7 +135,81 @@ header {
   justify-content: center;
   padding: 0 15px 0 17px;
   margin-top: 56px;
+
+  -webkit-animation: fadeInFromNone 0.5s ease-out;
+  -moz-animation: fadeInFromNone 0.5s ease-out;
+  -o-animation: fadeInFromNone 0.5s ease-out;
+  animation: fadeInFromNone 0.5s ease-out;
 }
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: grid;
+      opacity: 0;
+  }
+
+  100% {
+      display: grid;
+      opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: grid;
+      opacity: 0;
+  }
+
+  100% {
+      display: grid;
+      opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: grid;
+      opacity: 0;
+  }
+
+  100% {
+      display: grid;
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: grid;
+      opacity: 0;
+  }
+
+  100% {
+      display: grid;
+      opacity: 1;
+  }
+}
+
 section {
   margin-bottom: 45px;
 }
@@ -167,6 +242,9 @@ fieldset:disabled {
   -ms-user-select: none;
   mix-blend-mode: normal;
   opacity: 0.2;
+}
+fieldset:disabled label {
+  cursor: default;
 }
 .comment {
   width: 100%;
