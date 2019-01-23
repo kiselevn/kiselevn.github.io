@@ -33,6 +33,16 @@ const factorial = (n) => {
   }
 }
 
+const factorialCycle = (n) => {
+  let result = n;
+  
+  for (let i = 1; i < n; i++) {
+    result *= i;
+  }
+    
+  return result;
+}
+
 
 // Task #3 
 
