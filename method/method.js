@@ -1,5 +1,5 @@
 // forEach 
-var arr = ["Яблоко", "Апельсин", "Груша"];
+const arr = ["Яблоко", "Апельсин", "Груша"];
 
 // arr.forEach(function(item, i, arr) {
 //   console.log( i + ": " + item + " (массив:" + arr + ")" );
@@ -7,7 +7,7 @@ var arr = ["Яблоко", "Апельсин", "Груша"];
 
 const forEach = (f, arr) => {
   return arr.reduce((acc, cur, i, array) => {
-    f(cur, i , array);
+    return f(cur, i , array);
   }, []);
 };
 
@@ -18,9 +18,9 @@ forEach((item,i, arr) => {console.log(i + ": " + item + " (массив:" + arr 
 
 //filter
 
-var arr = [1, -1, 2, -2, 3];
+const arr = [1, -1, 2, -2, 3];
 
-// var positiveArr = arr.filter(function(number) {
+// const positiveArr = arr.filter(function(number) {
 //   return number > 0;
 // });
 
@@ -42,9 +42,9 @@ filter(n => n > 0, arr);
 // end
 
 // map 
-var names = ['HTML', 'CSS', 'JavaScript'];
+const names = ['HTML', 'CSS', 'JavaScript'];
 
-// var nameLengths = names.map(function(name) {
+// const nameLengths = names.map(function(name) {
 //   return name.length;
 // });
 
@@ -66,7 +66,7 @@ map(n => n.length, names);
 
 // Every
 
-var arr = [1, 1, -2];
+const arr = [1, 1, -2];
 
 function isPositive(number) {
   return number > 0;
@@ -115,7 +115,7 @@ every(n => n > 0, arr);
 
 // Some
 
-var arr = [1, 2, 8, -2];
+const arr = [1, 2, 8, -2];
 
 function isPositive(number) {
   return number < 0;
