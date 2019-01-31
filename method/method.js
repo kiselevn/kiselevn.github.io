@@ -1,78 +1,67 @@
 // forEach 
+var arr = ["Яблоко", "Апельсин", "Груша"];
 
-const forEach = (arr, callback) => {
-  return arr.reduce((previousValue, currentValue, index, array) => {
-    return previousValue.concat([ callback(currentValue, index, array) ]);  
-  }, [])  
+// arr.forEach(function(item, i, arr) {
+//   console.log( i + ": " + item + " (массив:" + arr + ")" );
+// });
+
+const forEach = (f, arr) => {
+  return arr.reduce((acc, cur, i, array) => {
+    f(cur, i , array);
+  }, []);
 };
+
+forEach((item,i, arr) => {console.log(i + ": " + item + " (массив:" + arr + ")" )} , arr);
 
 // end
 
+
 //filter
 
-const arr = [1, -1, 2, -2, 3];
+var arr = [1, -1, 2, -2, 3];
 
-arr.reduce((acc, current) => {
-  if(current > 0)
-  {acc.push(current);}
-  return acc;
-}, [])
+// var positiveArr = arr.filter(function(number) {
+//   return number > 0;
+// });
+
+// console.log( positiveArr );
 
 
-/*const filter = (array, callback) => {
-  return array.reduce((previousValue, currentValue, index, array) => {
-    let newArr = [];
-    if (callback(currentValue, index, array)) {
-      newArr.push(currentValue); 
+const filter = (f, arr) => {
+  return arr.reduce((acc, cur, i , array) => {
+    if(f(cur)){
+      acc.push(cur);
     }
-    return newArr;
-  }, []);
+    return acc;
+  }, []); 
 }
 
-let arrn = filter(arr, (number) => {return number > 0});
 
-console.log(arrn);*/
+filter(n => n > 0, arr);
 
+// end
 
-var arr = ["Яблоко", "Апельсин", "Груша"];
+// map 
+var names = ['HTML', 'CSS', 'JavaScript'];
 
-arr.forEach(function(item, i, arr) {
-  console.log( i + ": " + item + " (массив:" + arr + ")" );
-});
+// var nameLengths = names.map(function(name) {
+//   return name.length;
+// });
 
-
-arr.reduce((item, i, arr) => {
-  if (item) {
-      item.push(i);
-  }
-  return item;
-}, []);
+// получили массив с длинами
+// console.log( nameLengths ); // 4,3,10
 
 
-var arr = [1, 1, -2];
+const map = (f, arr) => {
+  return arr.reduce((acc, cur, i, array) => {
+    acc.push(f(cur, i, array));
+    return acc;
+  }, []);
+};
 
-// function isPositive(number) {
-//   return number > 0;
-// }
+map(n => n.length, names);
 
-// console.log( arr.every(isPositive) );
-// console.log( arr.some(isPositive) );
-
-arr.reduce((acc, cur) => {
-  console.log('!!!', cur);
-  if (cur > 0 && acc === true) {
-    return true;
-  } else return false;
-}, true);
-
-// arr.reduce((acc, cur) => {
-//   console.log('!!!', cur);
-//   if (cur === true) {
-//     return true;
-//   } else return false;
-// }, true);
-
-
+// end
 
 
 // Every
@@ -106,7 +95,7 @@ function isPositive(number) {
 //   });
 // }
 
-// version 3
+// version 3 correct
 
 const every = (f, arr) => {
   return arr.reduce((acc, cur) => {
@@ -126,51 +115,25 @@ every(n => n > 0, arr);
 
 // Some
 
-var arr = [-1, -1, 2];
+var arr = [1, 2, 8, -2];
 
 function isPositive(number) {
-  return number > 0;
+  return number < 0;
 }
 
-console.log( arr.some(isPositive) );
-
-const some = (arr, callback) => {
-  return arr.reduce(function callback(acc, cur, i, arr){
-    console.log('!!!', acc, 'cur:', cur);
-    if (acc > 0 || cur > 0) {
-      return true;
-    } 
-
-    return false;
-  });
-}
-
-some(arr);
+// console.log( arr.some(isPositive) );
 
 const some = (f, arr) => {
-  return arr.reduce((acc, cur) => {
-    console.log('acc:', acc);
-    console.log('cur:', cur);
-    console.log('f:', f(cur));
-    if (acc || cur) {
+  return arr.reduce((acc, cur, i, array) => {
+    if(acc || f(cur)){
       return true;
-    } 
+    }
 
-    return f(cur);
+    return false;
   }, false);
 }
 
+some(n => n > 0, arr);
 
 // end
 
-
-// test 
-
-/* every
-arr.reduce((acc, cur) => {
-  console.log('!!!', cur);
-  if (cur > 0 && acc === true) {
-    return true;
-  } else return false;
-}, true);
-*/
