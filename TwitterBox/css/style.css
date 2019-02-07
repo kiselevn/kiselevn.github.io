@@ -28,7 +28,7 @@ input {
   border-radius: 2px;
   padding: 10px;
 }
-.tweet-text {
+.tweet-message {
   display: block;
   padding: 10px;
   margin-bottom: 20px;
@@ -37,7 +37,7 @@ input {
   word-wrap: break-word;
   background-color: #fff;
 }
-.tweet-text:focus {
+.tweet-message:focus {
   outline: none;
   box-shadow: 0px 0px 3px #50a5da;
 }
