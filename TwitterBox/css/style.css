@@ -29,6 +29,7 @@ input {
   padding: 10px;
 }
 .tweet-message {
+  width: 100%;
   display: block;
   padding: 10px;
   margin-bottom: 20px;
@@ -36,6 +37,7 @@ input {
   border-radius: 5px;
   word-wrap: break-word;
   background-color: #fff;
+  resize: none;
 }
 .tweet-message:focus {
   outline: none;
@@ -87,7 +89,7 @@ input {
   max-height: 30px;
   vertical-align: -8px;
 }
-#counter {
+.counter {
   float: right;
   max-width: 85px;
   margin-right: 20px;
