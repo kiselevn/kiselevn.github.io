@@ -84,6 +84,15 @@ input {
   max-width: 200px;
   margin-left: 20px;
 }
+.image-preview ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.image-preview ul li {
+  display: inline;
+  margin-right: 5px;
+}
 .image-preview img {
   max-width: 30px;
   max-height: 30px;
@@ -100,11 +109,7 @@ input {
 .max-length {
   color: #ef6565;
 }
-.disabled {
+.button-send:disabled {
   cursor: default;
-  background: #cfecff;
-  pointer-events: none;
-}
-.disabled:hover {
   background: #cfecff;
 }
