@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>TwitterBox</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="viewport" content="width=device-width" />
-</head>
-<body>
-  <header>
-    <img src="image/icons/logo-twitter.png" alt="logo" class="logo">
-    <h1>Twitter Box</h1>
-  </header>
-  <div class="tweet-box">
-    <form>
-      <textarea name="tweet-message" class="tweet-message" id="tweet-message"></textarea>
-      <input type="file" accept="image/gif,image/jpeg,image/jpg,image/png" name="media" id="loading-images">
-      <label for="loading-images"></label>
-      <div id="image-preview"><img src="image/tsveta-ottenki-linii-volosy.jpg" alt="tsveta-ottenki-linii-volosy"></div>
-      <button type="submit" id="button-send" class="btn">Отправить</button>
-      <div id="counter" class="counter">280 из 280</div>
-    </form>
-  </div>
-</body>
-<script src="js/main.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TwitterBox</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <header>
+      <img src="image/icons/logo-twitter.png" alt="logo" class="logo" />
+      <h1>Twitter Box</h1>
+    </header>
+    <div class="tweet-box">
+      <form>
+        <textarea name="tweet-message" class="tweet-message" id="tweet-message"></textarea>
+        <input
+          type="file"
+          accept="image/gif,image/jpeg,image/jpg,image/png"
+          name="media"
+          id="loading-images"
+          class="loading-images"
+        />
+        <label for="loading-images"></label>
+        <div id="image-preview" class="image-preview">
+          <img src="image/tsveta-ottenki-linii-volosy.jpg" alt="tsveta-ottenki-linii-volosy" />
+        </div>
+        <button type="submit" class="btn button-send">Отправить</button>
+        <div id="counter" class="counter">280 из 280</div>
+      </form>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
 </html>
