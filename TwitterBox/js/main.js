@@ -1,5 +1,5 @@
-const MAX_LENGTH = 3;
-const IMAGE_LENGTH = 2;
+const MAX_LENGTH = 280;
+const IMAGE_LENGTH = 20;
 const input = document.querySelector('#tweet-message');
 const counter = document.querySelector('#counter');
 const button = document.querySelector('#button-send');
@@ -10,7 +10,7 @@ const imageList = document.querySelector('#image-list');
 const stat = {
   messageCounter: 0,
   imageCounter: 0,
-  image: []
+  imageUrl: []
 };
 
 const setCounterLength = len => {
@@ -33,28 +33,43 @@ const lengthControl = () => {
 
 const handleInputChange = () => {
   stat.messageCounter = input.value.length;
+
   lengthControl();
+};
+
+const setPreview = () => {
+  imageList.innerHTML = stat.imageUrl
+    .map(url => {
+      return `<li><img src="${url}"></li>`;
+    })
+    .join('');
+};
+
+const deleteImage = event => {
+  if (event.target.tagName === 'IMG') {
+    stat.imageUrl = stat.imageUrl.filter(e => {
+      return e !== event.target.currentSrc;
+    });
+
+    stat.imageCounter -= 1;
+
+    lengthControl();
+    setPreview();
+  }
 };
 
 const handleImageChange = event => {
   const reader = new window.FileReader();
-  const file = event.target.files[0];
 
   reader.onload = function exp(e) {
-    stat.image += `<li><img src="${e.target.result}"/></li>`;
-    imageList.innerHTML = stat.image;
-    // console.log(stat.image);
+    stat.imageUrl.push(e.target.result);
     stat.imageCounter += 1;
+
+    setPreview();
     lengthControl();
   };
 
-  reader.readAsDataURL(file);
-};
-
-const deleteImage = event => {
-  console.log(event);
-  debugger;
-  stat.imageCounter -= 1;
+  reader.readAsDataURL(event.target.files[0]);
 };
 
 input.addEventListener('input', handleInputChange);
