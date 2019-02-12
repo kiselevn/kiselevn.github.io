@@ -7,7 +7,7 @@ const imageInput = document.querySelector('#loading-images');
 const imagePreview = document.querySelector('#image-preview');
 const imageList = document.querySelector('#image-list');
 
-const stat = {
+const state = {
   messageCounter: 0,
   imageCounter: 0,
   imageUrl: []
@@ -18,7 +18,7 @@ const setCounterLength = len => {
 };
 
 const lengthControl = () => {
-  const totalLength = stat.messageCounter + stat.imageCounter * IMAGE_LENGTH;
+  const totalLength = state.messageCounter + state.imageCounter * IMAGE_LENGTH;
 
   if (totalLength > MAX_LENGTH) {
     counter.classList.add('max-length');
@@ -32,13 +32,13 @@ const lengthControl = () => {
 };
 
 const handleInputChange = () => {
-  stat.messageCounter = input.value.length;
+  state.messageCounter = input.value.length;
 
   lengthControl();
 };
 
 const setPreview = () => {
-  imageList.innerHTML = stat.imageUrl
+  imageList.innerHTML = state.imageUrl
     .map(url => {
       return `<li><img src="${url}"></li>`;
     })
@@ -47,11 +47,11 @@ const setPreview = () => {
 
 const deleteImage = event => {
   if (event.target.tagName === 'IMG') {
-    stat.imageUrl = stat.imageUrl.filter(e => {
+    state.imageUrl = state.imageUrl.filter(e => {
       return e !== event.target.currentSrc;
     });
 
-    stat.imageCounter -= 1;
+    state.imageCounter -= 1;
 
     lengthControl();
     setPreview();
@@ -62,8 +62,8 @@ const handleImageChange = event => {
   const reader = new window.FileReader();
 
   reader.onload = function exp(e) {
-    stat.imageUrl.push(e.target.result);
-    stat.imageCounter += 1;
+    state.imageUrl.push(e.target.result);
+    state.imageCounter += 1;
 
     setPreview();
     lengthControl();
