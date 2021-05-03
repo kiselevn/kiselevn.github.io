@@ -1,0 +1,94 @@
+body {
+  background: #fcfcfc;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+}
+
+.registration input, textarea, select {
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.registration__form-item, .registration__fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration__form-item {
+  margin-bottom: 20px;
+}
+
+.registration__form-item h3 {
+  margin-bottom: 20px;
+}
+
+.registration__form-item textarea {
+  padding: 0 10px;
+}
+
+.registration__fieldset {
+  margin-bottom: 10px;
+}
+
+.registration__fieldset select, [type=text], [type=email], [type=password] {
+  padding: 0 10px;
+  height: 30px;
+}
+
+.registration__control-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0px 20px;
+}
+
+.registration__fieldset:last-child {
+  margin-bottom: 0px;
+}
+
+.title {
+  margin: 10px 0 35px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  border-radius: 5px;
+  border-width: 0px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  outline: none;
+  background-color: #d9dde2;
+  border: none;
+}
+
+.button:hover {
+  background-color: #cfd2d6;
+}
+
+.user, .users {
+  padding: 10px 0px 20px;
+}
+
+.table {
+  display: block;
+  overflow-x: auto;
+}
+
+th, td {
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+td img {
+  max-width: 125px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Практическое задание</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container registration">
+    <h1 class="title">Регистрация</h1>
+    <form name="form" action="index.php?mode=result" method="post" enctype="multipart/form-data">
+      <div class="registration__form-item">
+        <h3>Укажите ваши данные</h3>
+        <div class="registration__fieldset">
+          <input type="text" name="first_name" placeholder="Имя" required />
+        </div>
+
+        <div class="registration__fieldset">
+          <input type="text" name="last_name" placeholder="Фамилия" required />
+        </div>
+
+        <div class="registration__fieldset">
+          <input type="email" name="email" placeholder="Email" required >
+        </div>
+
+        <div class="registration__fieldset">
+          <input type="password" name="password" placeholder="Password" required >
+        </div>
+
+        <div class="registration__fieldset">
+          <label for="city">Выберите ваш город</label>
+          <select id="city" name="city" size="1" required>
+            <option value="" class="hidden">---</option>
+            <option value="Ulyanovsk">Ульяновск</option>
+            <option value="Dimitrovgrad">Димитровград</option>
+            <option value="Kazan">Казань</option>
+            <option value="Samara">Самара</option>
+            <option value="Saratov">Саратов</option>
+          </select>
+        </div>
+
+        <div class="registration__fieldset">
+          <span>
+            Добавьте аватар
+          </span>
+          <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+          <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+        </div>
+      </div>
+
+      <div class="registration__form-item">
+        <h3>Какие языки программирования вы хотите изучить?</h3>
+        <label>
+          <input type="checkbox" name="programmingLanguages[]" value="php" checked/>
+          PHP
+        </label>
+        <label>
+          <input type="checkbox" name="programmingLanguages[]" value="js" />
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="programmingLanguages[]" value="go" />
+          GoLang
+        </label>
+        <label>
+          <input type="checkbox" name="programmingLanguages[]" value="python" />
+          Python
+        </label>
+      </div>
+
+      <div class="registration__form-item">
+        <h3>На кого вы хотите учиться?</h3>
+        <label>
+          <input type="radio" name="profession" value="frontend" />
+          Фронтендер
+        </label>
+        <label>
+          <input type="radio" name="profession" value="backend" checked />
+          Бэкендер
+        </label>
+        <label>
+          <input type="radio" name="profession" value="tester" />
+          Тестировщик
+        </label>
+        <label>
+          <input type="radio" name="profession" value="devops" />
+          DevOps
+        </label>
+      </div>
+
+      <div class="registration__form-item">
+        <h3>Прикрепите необходимые файлы</h3>
+        <input type="hidden" name="MAX_FILE_SIZE" value="128000000" />
+        <input type="file" name="files[]" multiple />
+      </div>
+
+      <div class="registration__form-item">
+        <h3>Расскажите немного о себе</h3>
+        <textarea name="comment" rows="4" placeholder="Я Петр I..." ></textarea>
+      </div>
+
+      <div class="registration__control-buttons">
+        <input class="button" type="reset" value="Сбросить форму" />
+        <button class="button" type="submit">Отправить форму</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+</html>

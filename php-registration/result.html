@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Практическое задание</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container user">
+    <h1 class="title">Пользователи</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Имя</th>
+          <th scope="col">Фамилия</th>
+          <th scope="col">Почта</th>
+          <th scope="col">Город</th>
+          <th scope="col">Аватар</th>
+          <th scope="col">Язык программирования</th>
+          <th scope="col">Профессия</th> 
+          <th scope="col">Файлы</th>
+          <th scope="col">О себе</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach($users as $user) : ?>
+          <tr>
+            <td scope="row"><?php echo $user['first_name']; ?></th>
+            <td><?php echo $user['last_name']; ?></td>
+            <td><?php echo $user['email']; ?></td>
+            <td><?php echo translateCityName($user['city']); ?></td>
+            <td><?php if (!empty($user['avatar'])) : ?><img src="<?php echo str_replace('%', '%25', $user['avatar']); ?>" alt="image" /><?php endif; ?></td>
+            <td><?php echo $user['programming_languages']; ?></td>
+            <td><?php echo $user['profession']; ?></td>
+            <td>
+              <?php $files = explode(";", $user['files']); ?>
+              <?php foreach($files as $file) : ?>
+                <?php if(!empty($file)) : ?>
+                  <a href="<?php echo str_replace('%', '%25', $file); ?>" download>Скачать файл</a>
+                <?php endif; ?>
+              <?php endforeach; ?> 
+            </td> 
+            <td><?php echo $user['comment']; ?></td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
